@@ -1,0 +1,16 @@
+.App{
+  border: rgba(255, 0, 179, 0.137) solid 5px;
+  text-align: center;
+}
+
+
+.Todo, .Login{
+  border: rgb(190, 115, 178) solid 3px;
+}
+.Todo span{
+  margin: 0px 10px 0px 10px;
+}
+
+.Add, .Register{
+  border: rgb(131, 5, 83) solid 3px;
+}
