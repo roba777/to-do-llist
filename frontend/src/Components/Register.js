@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {Link} from 'react-router-dom';
 
 export default function Register() {
-  const [email, setEmail] = useState("roba@yahoo.com");
-  const [password, setPassword] = useState("123");
-  const [username, setUsername] = useState("roba 7");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
 
   const registerFunc = (e) => {
     e.preventDefault();
@@ -61,6 +62,8 @@ export default function Register() {
         <br />
         <input type="submit" value="Register" onClick={registerFunc} />
       </form>
+
+      <Link to='/Login'>Have An Accont?</Link>
     </div>
   );
 }

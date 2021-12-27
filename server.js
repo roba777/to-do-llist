@@ -17,6 +17,9 @@ app.get("/", (req, res) => {
 // CRUD: Create, Read, Update, Delete
 
 app.get("/tasks", (req, res) => {
+  // use this if mongoDB didn't work for you
+  // res.json(arrServer);
+
   Todo.find({}, (err, data) => {
     if (err) {
       console.log("ERROR: ", err);
@@ -26,7 +29,7 @@ app.get("/tasks", (req, res) => {
   });
 });
 
-//  ?key=value&key=value
+//              ?key=value&key=value
 app.get("/filter", (req, res) => {
   console.log(req.query);
   Todo.find({ isCompleted: req.query.isCompleted }, (err, data) => {
@@ -38,29 +41,6 @@ app.get("/filter", (req, res) => {
     }
   });
 });
-/*
-the up endpoint is replace to these two
-app.get("/completed", (req, res) => {
-  Todo.find({ isCompleted: true }, (err, data) => {
-    if (err) {
-      console.log("ERR", err);
-    } else {
-      // console.log(data);
-      res.json(data);
-    }
-  });
-});
-app.get("/not_completed", (req, res) => {
-  Todo.find({ isCompleted: false }, (err, data) => {
-    if (err) {
-      console.log("ERR", err);
-    } else {
-      // console.log(data);
-      res.json(data);
-    }
-  });
-});
-*/
 
 app.post("/tasks", (req, res) => {
   // console.log('25:',req.body);
@@ -141,6 +121,7 @@ app.put("/tasks/:id/:isCompleted", (req, res) => {
   );
 });
 
+// USER
 app.post("/users/register", (req, res) => {
   User.create(req.body, (err, newUser) => {
     if (err) {
@@ -181,9 +162,33 @@ app.post("/users/login", (req, res) => {
     }
   });
 });
+
 app.listen(5000, () => {
   console.log("SERVER IS WORKING ..");
 });
 
+/*
+the up endpoint is replace to these two
+app.get("/completed", (req, res) => {
+  Todo.find({ isCompleted: true }, (err, data) => {
+    if (err) {
+      console.log("ERR", err);
+    } else {
+      // console.log(data);
+      res.json(data);
+    }
+  });
+});
+app.get("/not_completed", (req, res) => {
+  Todo.find({ isCompleted: false }, (err, data) => {
+    if (err) {
+      console.log("ERR", err);
+    } else {
+      // console.log(data);
+      res.json(data);
+    }
+  });
+});
+*/
 
 // requests to the url "/" ( http://localhost:5001/ )
