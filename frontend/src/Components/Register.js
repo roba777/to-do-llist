@@ -30,7 +30,7 @@ export default function Register() {
   return (
     <div className="Register">
       <form action="">
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email" className="form-control" className="btn btn ">Email:</label>
         <input
           type="email"
           placeholder="Write email here ..."
@@ -38,9 +38,9 @@ export default function Register() {
             setEmail(e.target.value);
           }}
           value={email}
-        />
+          className="form-control" />
         <br />
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="password" className="form-control"className="btn btn ">Password:</label>
         <input
           type="password"
           placeholder="Write password here ..."
@@ -48,9 +48,9 @@ export default function Register() {
             setPassword(e.target.value);
           }}
           value={password}
-        />
+          className="form-control"/>
         <br />
-        <label htmlFor="username">Username:</label>
+        <label htmlFor="username" className="form-control" className="btn btn ">Username:</label>
         <input
           type="text"
           placeholder="Write username here ..."
@@ -58,9 +58,10 @@ export default function Register() {
             setUsername(e.target.value);
           }}
           value={username}
-        />
+          className="form-control"/>
         <br />
-        <input type="submit" value="Register" onClick={registerFunc} />
+        <br/>
+        <input type="submit" value="Register" onClick={registerFunc}  className="btn btn-outline-secondary"/>
       </form>
 
       <Link to='/Login'>Have An Accont?</Link>

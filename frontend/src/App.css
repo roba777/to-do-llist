@@ -1,16 +1,36 @@
 .App{
-  border: rgba(255, 0, 179, 0.137) solid 5px;
+  border: rgba(247, 140, 215, 0.137) solid 1px;
   text-align: center;
+  color: rgb(185, 93, 150);
+  font-size: 15px;
+  font-style: italic;
+  
 }
 
 
-.Todo, .Login{
-  border: rgb(190, 115, 178) solid 3px;
+.Todo {
+  border:rgba(247, 140, 215, 0.137) solid 1px;
+  text-align: right;
+ 
+ 
 }
 .Todo span{
   margin: 0px 10px 0px 10px;
+  
 }
 
 .Add, .Register{
-  border: rgb(131, 5, 83) solid 3px;
+  border:rgba(247, 140, 215, 0.137) solid 1px;
+  background: transparent;
+}
+
+
+body {
+  background-image:url("img5.jpg");
+  background-color: #cccccc;
+ background-repeat: no-repeat;
+ background-position-x: center;
+ height: 100vh;
+ background-size: cover;
+  
 }
